@@ -164,7 +164,7 @@ function selectDB(selectTable){
 			break;
 		case "searchBusStation":
 			var findNm=$("#searchStationTextField").val();
-			$("#stationListView").empty();
+			$("#stationListView li").empty();
 			db.transaction(function(tr){
 				
 				var selectSQL = "select * from BusStation where stName like ?";
@@ -187,7 +187,11 @@ function selectDB(selectTable){
 								stId+"</span><span class='nodeNo'>"+
 								stNo+"</span></li>");
 					});
+					
 					$("#stationListView").listview("refresh");
+					var parent = $("#stationListView");
+					stopLoading(parent);
+					
 				}, function(tr, err){
 					console.log(err.code+', '+err.message);
 				});

@@ -10,6 +10,8 @@ $(function(){
 	
 	//정류장list 검색
 	$("#btnSearch").click(function(){
+		var parent = $("#stationListView");
+		startLoading(parent, "정류장을 검색하는 중입니다.", "black");
 		selectDB("searchBusStation");
 	});
 	
