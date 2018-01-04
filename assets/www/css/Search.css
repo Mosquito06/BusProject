@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+/* 나눔스퀘어 라운드 글씨 폰트 */
+@font-face{
+	font-family: "NanumSquareRoundB";
+	src: url("../font/NanumSquareRoundB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundEB";
+	src: url("../font/NanumSquareRoundEB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundL";
+	src: url("../font/NanumSquareRoundL.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundR";
+	src: url("../font/NanumSquareRoundR.ttf") format("truetype");
+}
+
+#searchArea{
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.searchInputWidth{
+	width:85% !important;
+	margin-right:2%;
+	margin-left: 3%;
+	float:left;
+	overflow:hidden;
+}
+
+/* 정류장 ID와 번호를 보이지 않도록 설정 */
+.nodeID, .busRoute, .nodeNo{
+	display:none !important;
+}
+
+div#SearchHeader, div#mainHeader{
+	font-family: NanumSquareRoundL;
+	padding: 0;
+}
+
+/* onOff 버튼을 담고 있는 ul에 realative */
+div#mainContent ul#busListView{
+	position: relative;
+}
+/* onOff를 감싸고 있는 div의 위치를 지정하는 CSS */
+div.onOffDiv{
+	position: absolute;
+	left: 140px;
+	top: 33px;
+}
+
+/* onOff 버튼 손잡이 부분 배경색 하얀색으로 CSS 변경 */
+a.ui-btn-inherit{
+	background-color: white !important;
+}
+
+div.ui-corner-all{
+	background-color: white !important;	
+}
+
+/* onOff 버튼 on 상태일 때 CSS */
+div.ui-flipswitch-active{
+	background-color: #3b8686 !important;	
+}
+
+/* onOff 버튼 off 상태일 때 CSS */
+span.ui-flipswitch-off{
+	color: black !important;
+}
+
+/* 버스 노선 버튼(onoff, 지도) CSS */
+
+ul#routeListView{
+	position: relative;
+}
+
+div.routeBtnDiv{
+	position: absolute;
+	top: 5%;
+	right: 20%;
+} 
+
+div.routeBtnDiv div.ui-flipswitch{
+	float: left !important;
+}
+
+div.routeBtnDiv div.ui-btn{
+	position: absolute;
+	top: -10%;
+	right: -50%;
+}
+
+/* BookMarkMapDiv padding 제거 */
+div#BookMarkMapDiv{
+	padding: 0;
+}
+
+div#bookMarkMap{
+	width: 100%;
+}

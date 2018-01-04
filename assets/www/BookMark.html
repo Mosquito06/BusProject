@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Insert title here</title>
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile.icons-1.4.5.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/BusProjectTheme.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+<link rel="stylesheet" href="css/Loading.css">
+<link rel="stylesheet" href="css/Icon.css">
+<link rel="stylesheet" href="css/BookMark.css">
+<link rel="stylesheet" href="css/Search.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=gVevEGqRk45E0X9PGY7R&submodules=geocoder"></script>
+<script src="js/jquery.xdomainajax.js"></script>
+<script src="js/busStationNearUser.js"></script>
+<script src="js/BookMark.js"></script>
+<script src="js/busInfo.js"></script>
+<script src="js/DataBase.js"></script>
+<script src="js/Loading.js"></script>
+<script src="js/busVibration.js"></script>
+<script src="js/Map.js"></script>
+<script src="js/route.js"></script>
+<script src="js/alarm.js"></script>
+</head>
+<body>
+	<div data-role="page" id="BookMarkMain">
+		<div data-role="header" id="BookMarkHeader" data-position="fixed">
+			<h1>즐겨찾기</h1>
+		</div>
+		<div data-role ="content" id="BookMarContent">
+			<ul data-role="listview" id="stationListView">
+			
+			</ul>
+		</div>
+		<div data-role ="footer" id="BookMarFooter" data-position="fixed">
+			<div data-role="navbar" id="footerNav">
+				<ul>
+					<li><a href="Map.html" data-icon="map" data-ajax="false" rel="external">현재위치</a></li>
+					<li><a href="Search.html" data-icon="search2"  data-ajax="false" rel="external">검색하기</a></li>
+					<li><a href="BookMark.html" data-icon="bookmark" data-ajax="false" rel="external">즐겨찾기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="BookMarkSub" class="ui-page-theme-a">
+		<div data-role="header" id="mainHeader">
+			<a href="#BookMarkMain" data-icon="arrow-l" data-iconpos="notext"></a>
+			<h1 id="stName"></h1>
+			<a href="#BookMarkMap" rel="external" data-icon="location" data-iconpos="notext" id="stationLocation"></a>
+			<a href="#deleteDialog" data-rel="dialog" data-icon="delete" data-iconpos="notext" id="deleteStation"></a>
+		</div>
+		<div data-role="content" id="bookMarkContent">
+			<ul data-role="listview" id="busListView">
+				
+			
+			</ul>
+		</div>
+		<div data-role ="footer" id="bookMarkFooter" data-position="fixed">
+			<div data-role="navbar" id="footerNav">
+				<ul>
+					<li><a href="Map.html" data-icon="map" data-ajax="false" rel="external">현재위치</a></li>
+					<li><a href="Search.html" data-icon="search2" data-ajax="false" rel="external">검색하기</a></li>
+					<li><a href="BookMark.html" data-icon="bookmark" data-ajax="false" rel="external">즐겨찾기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="BookMarkMap">
+		<div data-role="header" id="BookMarkMapHeader" data-position="fixed">
+			<a href="#BookMarkSub" data-icon="arrow-l" data-iconpos="notext"></a>
+			<h1 id="BookMarkStationLocationHeader"></h1>
+		</div>
+		<div data-role="content" id="BookMarkMapDiv">
+			<div id="bookMarkMap">
+			
+			</div>	
+		</div>
+	</div>
+	
+	
+<!-- 노선 정보 -->
+	<div data-role="page" id="routePage">
+		<div data-role="header" id="routeHeader" data-position="fixed">
+			<h1></h1>
+			<a href="#BookMarkSub" data-icon="arrow-l" data-iconpos="notext" id="btnBackNode"></a>
+			<a data-icon="recycle" data-iconpos="notext" class="ui-btn-right" id="btnReverse"></a>
+		</div>
+		<div data-role="content" id="routeContent">
+			<ul data-role="listview" id="routeListView">
+			
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="footerNav">
+				<ul>
+					<li><a href="Map.html" data-icon="map" data-ajax="false" rel="external">현재위치</a></li>
+					<li><a href="Search.html" data-icon="search2"  data-ajax="false" rel="external">검색하기</a></li>
+					<li><a href="BookMark.html" data-icon="bookmark" data-ajax="false" rel="external">즐겨찾기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

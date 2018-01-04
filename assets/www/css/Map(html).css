@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/* 나눔스퀘어 라운드 글씨 폰트 */
+@font-face{
+	font-family: "NanumSquareRoundB";
+	src: url("../font/NanumSquareRoundB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundEB";
+	src: url("../font/NanumSquareRoundEB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundL";
+	src: url("../font/NanumSquareRoundL.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundR";
+	src: url("../font/NanumSquareRoundR.ttf") format("truetype");
+}
+
+div#mapHeader{
+	font-family: NanumSquareRoundL;
+
+}
+
+div#mapFooter{
+	font-family: NanumSquareRoundL;
+
+}
+
+/* mapContent padding 제거 */
+div#mapContent{
+	padding: 0;
+}
+
+/* Id map 기본 너비 조정 */
+div#map{
+	width: 100%;
+}
+
+

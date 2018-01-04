@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Insert title here</title>
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile.icons-1.4.5.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/BusProjectTheme.min.css">
+<link rel="stylesheet" href="jquery-mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+<link rel="stylesheet" href="css/Loading.css">
+<link rel="stylesheet" href="css/Map(html).css">
+<link rel="stylesheet" href="css/Icon.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=gVevEGqRk45E0X9PGY7R&submodules=geocoder"></script>
+<script src="jquery-mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- <script src="cordova.js"></script>
+<script src="cordova_plugins.js"></script> -->
+<script src="js/busStationNearUser.js"></script>
+<script src="js/jquery.xdomainajax.js"></script>
+<script src="js/Map(html).js"></script>
+<script src="js/Loading.js"></script>
+<script src="js/Map.js"></script>
+</head>
+<body>
+	<div data-role="page" id="MapPage" class="ui-page-theme-a">
+		<div data-role="header" id="mapHeader" data-position="fixed">
+			<h1>현재위치</h1>
+		</div>
+		<div data-role="content" id="mapContent">
+			<div id="map">
+				
+			</div>
+		</div>
+		<div data-role ="footer" id="mapFooter" data-position="fixed">
+			<div data-role="navbar" id="footerNav">
+				<ul>
+					<li><a href="Map.html" data-icon="map" data-ajax="false" rel="external">현재위치</a></li>
+					<li><a href="Search.html" data-icon="search2" data-ajax="false" rel="external">검색하기</a></li>
+					<li><a href="BookMark.html" data-icon="bookmark" data-ajax="false" rel="external">즐겨찾기</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

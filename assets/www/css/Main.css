@@ -1,0 +1,135 @@
+@CHARSET "UTF-8";
+
+/* 나눔스퀘어 라운드 글씨 폰트 */
+@font-face{
+	font-family: "NanumSquareRoundB";
+	src: url("../font/NanumSquareRoundB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundEB";
+	src: url("../font/NanumSquareRoundEB.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundL";
+	src: url("../font/NanumSquareRoundL.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "NanumSquareRoundR";
+	src: url("../font/NanumSquareRoundR.ttf") format("truetype");
+}
+
+/* Main 색깔 */
+div#LoadginPage, div#Main{
+	background-color: #79bd9a;
+}
+
+/* Main 로고 CSS */
+img#JDlogo{
+	display: none;
+	width: 60%;
+	margin: 70% auto;
+}
+
+/* 교통상황 경고문 CSS */
+p#MainText{
+	color: white;
+	font-family: NanumSquareRoundL;
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 75%;
+	display: none;
+}
+
+/* 메인 Header 기본 디스플레이 보이지 않게 설정 */
+div#mainHeader{
+	display: none;
+	font-family: NanumSquareRoundL;
+}
+/* 메인 Content 폰트 설정 */
+div#mainContent{
+	font-family: NanumSquareRoundL;
+}
+
+/* onOff 버튼을 담고 있는 ul에 realative */
+div#mainContent ul#busListView{
+	position: relative;
+}
+/* onOff를 감싸고 있는 div의 위치를 지정하는 CSS */
+div.onOffDiv{
+	position: absolute;
+	left: 140px;
+	top: 33px;
+}
+
+/* onOff 버튼 손잡이 부분 배경색 하얀색으로 CSS 변경 */
+a.ui-btn-inherit{
+	background-color: white !important;
+}
+
+div.ui-corner-all{
+	background-color: white !important;	
+}
+
+/* onOff 버튼 on 상태일 때 CSS */
+div.ui-flipswitch-active{
+	background-color: #3b8686 !important;	
+}
+
+/* onOff 버튼 off 상태일 때 CSS */
+span.ui-flipswitch-off{
+	color: black !important;
+}
+
+/* 메인 Footer 기본 디스플레이 보이지 않게 설정 */
+div#mainFooter{
+	display: none;
+	font-family: NanumSquareRoundL;
+}
+
+/* 메인 Content 내 #busListView li CSS 설정*/
+div#mainContent ul#busListView li p.busNo{
+	font-size: 1em;
+}
+
+div#mainContent ul#busListView li p.busPosition{
+	font-size: 0.8em;
+}
+
+/* 메인 Header h1 내 span 태그 보이지 않게 설정  */
+.nodeID, .busRoute{
+	display:none !important;
+}
+
+/* 버스 노선 버튼(onoff, 지도) CSS */
+
+ul#routeListView{
+	position: relative;
+}
+
+div.routeBtnDiv{
+	position: absolute;
+	top: 5%;
+	right: 20%;
+} 
+
+div.routeBtnDiv div.ui-flipswitch{
+	float: left !important;
+}
+
+div.routeBtnDiv div.ui-btn{
+	position: absolute;
+	top: -10%;
+	right: -50%;
+}
+
+/* BookMarkMapDiv padding 제거 */
+div#BookMarkMapDiv{
+	padding: 0;
+}
+
+div#bookMarkMap{
+	width: 100%;
+}

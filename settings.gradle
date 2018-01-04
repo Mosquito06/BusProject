@@ -1,0 +1,4 @@
+// GENERATED FILE - DO NOT EDIT
+include ":"
+include ":CordovaLib"
+include ":..:..:..:android_sdk:extras:google:libproject:google-play-services_lib"
