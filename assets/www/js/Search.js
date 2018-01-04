@@ -10,8 +10,12 @@ $(function(){
 	
 	//정류장list 검색
 	$("#btnSearch").click(function(){
-		var parent = $("#stationListView");
-		startLoading(parent, "정류장을 검색하는 중입니다.", "black");
+		
+		if($("#searchStationTextField").val() == null || $("#searchStationTextField").val() == ""){
+			alert("검색할 정류장명을 입력하세요.");
+			return;
+		}
+
 		selectDB("searchBusStation");
 	});
 	
