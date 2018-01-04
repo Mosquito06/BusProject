@@ -36,7 +36,7 @@ function stationInfo(stationId, parent){
 			$("#busListView li .busNo").each(function(i,obj){
 				for(var j=0;j<item.length;j++){
 					if($(obj).text()==item[j]){
-						$(obj).parent().find(".onOff").prop("checked","true");
+						$(obj).parent().parent().find(".onOff").prop("checked","true");
 					};
 				}
 				

@@ -13,14 +13,14 @@ $(function(){
 		//onOff버튼 상태 파악해서 on되어있는 버스번호 item배열에 저장
 		$("#busListView .onOffDiv input").each(function(i,obj){
 			if($(obj).prop("checked")==true){
-				item.push($(obj).parents("li").find(".busNo").text());
+				item.push($(obj).parent().parent().parent().find(".busNo").text());
 			};
 		});
 		
 		//정류장 버스정보 갱신
 		intervalId=setInterval(function(){
 			stationInfo($("#mainHeader").find(".nodeID").text(),$("#busListView"));
-		},30000);
+		},10000);
 		
 		$(".onOff").flipswitch().flipswitch("refresh");
 		if(item.length==0){

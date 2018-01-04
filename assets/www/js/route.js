@@ -8,7 +8,7 @@ $(function(){
 	var parent = null; // 로딩화면에 나타나기 위한 부모 태그
 	var stNode=[];//도착알림을 위한 정류장nodeID
 		
-	$(document).on("click","#busListView li",function(){
+	$(document).on("click","#busListView li a",function(){
 		// 로딩화면 추가
 		parent = $("#routeContent");
 		startLoading(parent, "노선 정보를 가져오는 중입니다.", "black");
