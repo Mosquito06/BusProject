@@ -89,9 +89,9 @@ function alarmStationLocation(){
 	    	
 	    	$(".arriveOnOff").flipswitch().flipswitch("refresh");
 	    	
-	    }
-	    
-	                        
+
+	    }	                        
+
 	}
 
 	function displayError(error) {

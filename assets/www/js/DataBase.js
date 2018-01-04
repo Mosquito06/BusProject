@@ -165,8 +165,8 @@ function selectDB(selectTable){
 		case "searchBusStation":
 			var findNm=$("#searchStationTextField").val();
 			$("#stationListView").empty();
+			
 			db.transaction(function(tr){
-				
 				var selectSQL = "select * from BusStation where stName like ?";
 				
 				tr.executeSql(selectSQL, ["%"+findNm+"%"], function(tr, rs){
@@ -187,7 +187,9 @@ function selectDB(selectTable){
 								stId+"</span><span class='nodeNo'>"+
 								stNo+"</span></li>");
 					});
+					
 					$("#stationListView").listview("refresh");
+					
 				}, function(tr, err){
 					console.log(err.code+', '+err.message);
 				});

@@ -10,7 +10,13 @@ $(function(){
 	
 	//정류장list 검색
 	$("#btnSearch").click(function(){
-		selectDB("searchBusStation");
+		
+		if($("#searchStationTextField").val() == null || $("#searchStationTextField").val() == ""){
+			alert("검색할 정류장명을 입력하세요.");
+			return;
+		}
+
+		selectDB("searchBusStation"); 
 	});
 	
 	//정류장 버스 정보 보기
