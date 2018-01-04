@@ -54,7 +54,6 @@ function stationInfo(stationId, parent){
 			
 			// 로딩화면 종료
 			stopLoading($("#mainContent"));
-			
 			vibration();
 		}
 	});

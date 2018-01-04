@@ -22,12 +22,12 @@ $(function(){
 			
 			// 메인 화면으로 이동
 			location.replace("#Main");
+					
+			// 위치 활성화 여부 확인
+			checkAvailability();
 			
-
-			// 위치 사용여부 잠시 주석 처리
-			// checkAvailability();
-			
-			selectDB("checkUserStation");
+			// 작업의  편의를 위해 임시로 사용한 함수
+			// selectDB("checkUserStation");
 			
 		});
 	});
@@ -35,6 +35,8 @@ $(function(){
 	$(document).on("click", "#routeListView input.locationInput", function(){
 		// 노선정보 맵 페이지로 이동
 		location.href = "#BookMarkMap";
+		var parent = $("#BookMarkMapDiv");
+		stopLoading(parent);
 		
 		// 정류장 이름 map h1에 표기
 		var stationName = $(this).parent().parent().parent().find(".routeStationName").text();
@@ -44,7 +46,7 @@ $(function(){
 		$("#bookMarkMap").empty();
 		$("#BookMarkMapDiv").find(".loading").remove();
 		
-		var parent = $("#BookMarkMapDiv");
+		
 		startLoading(parent, "정류장 위치를 찾는 중입니다.", "black");
 		
 		stNodeId=$(this).parent().parent().parent().find(".nodeID").text();

@@ -20,7 +20,7 @@ $(function(){
 		//정류장 버스정보 갱신
 		intervalId=setInterval(function(){
 			stationInfo($("#mainHeader").find(".nodeID").text(),$("#busListView"));
-		},10000);
+		},40000);
 		
 		$(".onOff").flipswitch().flipswitch("refresh");
 		if(item.length==0){
