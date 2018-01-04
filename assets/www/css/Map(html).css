@@ -41,4 +41,6 @@ div#map{
 	width: 100%;
 }
 
-
+*{
+	text-shadow:none !important;
+}

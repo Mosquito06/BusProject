@@ -118,3 +118,6 @@ div.loading p{
 	font-family: NanumSquareRoundL;
 }
 
+*{
+	text-shadow:none !important;
+}

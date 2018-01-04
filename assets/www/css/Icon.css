@@ -27,3 +27,7 @@ div#footerNav .ui-btn{
 	margin-top: -3px;
 	padding: 5px;
 }
+
+*{
+	text-shadow:none !important;
+}

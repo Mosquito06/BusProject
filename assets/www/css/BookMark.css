@@ -109,3 +109,6 @@ div.routeBtnDiv div.ui-btn{
 	right: -50%;
 }
 
+*{
+	text-shadow:none !important;
+}

@@ -89,8 +89,6 @@ function alarmStationLocation(){
 	    	
 	    	$(".arriveOnOff").flipswitch().flipswitch("refresh");
 	    	
-	    }else{
-	    	alert("목적지로 가는중 입니다.");
 	    }
 	    
 	                        
