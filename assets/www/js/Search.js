@@ -16,7 +16,7 @@ $(function(){
 			return;
 		}
 
-		selectDB("searchBusStation");
+		selectDB("searchBusStation"); 
 	});
 	
 	//정류장 버스 정보 보기
